@@ -6,14 +6,15 @@
 /*   By: davidma2 <davidma2@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/22 00:34:02 by davidma2          #+#    #+#             */
-/*   Updated: 2024/12/03 14:58:30 by davidma2         ###   ########.fr       */
+/*   Updated: 2025/05/20 10:16:03 by davidma2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-int ft_res_print(va_list arguments, unsigned char c)
+
+int	ft_res_print(va_list arguments, unsigned char c)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	if (c == 'c')
@@ -32,18 +33,18 @@ int ft_res_print(va_list arguments, unsigned char c)
 		i += ft_putchar('%');
 	return (i);
 }
-int ft_printf(char const *res, ...)
+int	ft_printf(char const *res, ...)
 {
-	va_list arguments;
-	int i;
-	int j;
+	va_list	arguments;
+	int		i;
+	int		j;
 
 	i = 0;
 	j = 0;
 	va_start(arguments, res);
-	while(res[i])
+	while (res[i])
 	{
-		if(res[i] == '%' && res[i] + 1)
+		if (res[i] == '%' && res[i] + 1)
 		{
 			j += ft_res_printf(arguments, res[i + 1]);
 			i++;
@@ -53,5 +54,5 @@ int ft_printf(char const *res, ...)
 		i++;
 	}
 	va_end(arguments);
-	return(j);
+	return (j);
 }
