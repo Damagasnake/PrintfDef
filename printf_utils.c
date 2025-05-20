@@ -6,7 +6,7 @@
 /*   By: davidma2 <davidma2@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/22 00:34:21 by davidma2          #+#    #+#             */
-/*   Updated: 2025/05/20 10:16:17 by davidma2         ###   ########.fr       */
+/*   Updated: 2025/05/20 10:24:14 by davidma2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ int	ft_putchar(char c)
 {
 	return (write(1, &c, 1));
 }
+
 int	ft_putstr(char *str)
 {
 	int	i;
@@ -30,6 +31,7 @@ int	ft_putstr(char *str)
 	}
 	return (i);
 }
+
 int	ft_putnbr(int nmbr)
 {
 	int		i;
@@ -49,6 +51,7 @@ int	ft_putnbr(int nmbr)
 	i += ft_putchar(num);
 	return (i);
 }
+
 int	ft_uputnbr(unsigned int nmbr)
 {
 	int		i;

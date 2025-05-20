@@ -6,7 +6,7 @@
 /*   By: davidma2 <davidma2@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/22 00:34:02 by davidma2          #+#    #+#             */
-/*   Updated: 2025/05/20 10:16:03 by davidma2         ###   ########.fr       */
+/*   Updated: 2025/05/20 10:27:11 by davidma2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ int	ft_res_print(va_list arguments, unsigned char c)
 		i += ft_putchar('%');
 	return (i);
 }
+
 int	ft_printf(char const *res, ...)
 {
 	va_list	arguments;
